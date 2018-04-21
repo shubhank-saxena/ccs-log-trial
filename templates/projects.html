@@ -1,0 +1,23 @@
+{% extends 'index.html' %}
+
+{% block content %}
+
+    {% for projects in row %}
+
+
+<div class="card" style="width: 18rem;">
+<img class="card-img-top" src="{{ projects[3] }}" alt="Card image cap">
+  <div class="card-body">
+    <h5 class="card-title">{{ projects[1] }}</h5>  <!--  Card Title -->
+    <p class="card-text">{{ projects[2] }}</p>    <!--  Content -->
+    <a href="{{ projects[4] }}" class="card-link">Apply</a>
+    <a href="#" class="card-link">Edit</a>
+    <a href="#" class="card-link">Delete</a>
+  </div>
+</div>
+
+
+    {% endfor %}
+
+
+{% endblock %}
